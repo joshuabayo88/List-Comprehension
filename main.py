@@ -1,3 +1,4 @@
+import random
 # my_numbers = [1, 2, 3, 4]
 # new_numbers = ([n + 1 for n in my_numbers])
 # print(new_numbers)
@@ -18,3 +19,7 @@ name_list = ["Bayo", "Joshua", "Beth", "Alex", "Jossy"]
 short_name = [name for name in name_list if len(name) < 5]
 cap_name = [name.upper() for name in name_list]
 print(cap_name)
+
+# Dictionary Comprehension
+students_score = {student:random.randint(1, 100) for student in name_list}
+print(students_score)
