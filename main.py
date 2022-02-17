@@ -34,7 +34,12 @@ student_dict = {
 }
 student_data_frame = pd.DataFrame(student_dict)
 print(student_data_frame)
-for(index, row) in student_data_frame.iterrows():
-    if row.student == "Bayo":
-        print(row.student)
-        print(row.scores)
+names = ["bayo", "olajide", "abidemi", "bayo", "olajide", "abidemi", "bayo", "olajide", "abidemi", "bayo",]
+names_dict = {name:names.count(name) for name in names}
+print(names_dict)
+# for(index, row) in student_data_frame.iterrows():
+#     if row.student == "Bayo":
+#         print(row.student)
+#         print(row.scores)
+student_comp = {row.student:row.scores for (index, row) in student_data_frame.iterrows()}
+print(student_comp)
